@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:quiz_app/QuizHeader.dart';
+import 'package:quiz_app/recentQuiz.dart';
 class QuizPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,16 @@ class QuizPage extends StatelessWidget {
             //QUIZ HEADER CARD WIDGET
             QuizHeader(),
             //LIST VIEW OF QUIZZES
+            Expanded(child: ListView(
+              physics: const BouncingScrollPhysics(),
+              padding: EdgeInsets.only(top:25,left: 15, bottom:15, right: 15),
+              children: [
+                Text("Recent Quiz",
+                style: Theme.of(context).textTheme.headline6,),
+                SizedBox(height: 15),
+                RecentQuiz(),
+              ],
+            ),),
           ],
         ),),
         bottomNavigationBar: BottomNavigationBar(
