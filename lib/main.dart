@@ -10,14 +10,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Quiz App',
-      debugShowCheckedModeBanner:false,
+      title: 'Quiz App UI',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-       textTheme: GoogleFonts.quicksandTextTheme(
-        Theme.of(context).textTheme,
-      ),),
-      home: QuizPage(),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        textTheme: GoogleFonts.quicksandTextTheme(
+          Theme.of(context).textTheme,
+        ),
+      ),
+      home:  QuizPage(),
     );
   }
 }
